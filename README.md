@@ -1,4 +1,11 @@
-#Session 3
+# lunesdemobile
 
-The blogpost with the writeup can be seen here: https://cmrodriguez.me/blog/bug-analysis-google-search-rce/
-The file can be found on: https://drive.google.com/file/d/1yHEhJqoNe6aTZgtc6fgC2wakXgbZdfe6/view?usp=sharing
+Repo with content from the sessions streamed on https://www.twitch.tv/viernesdecrypto
+
+Each folder has the content used on each session, and details of the content as well.
+
+For any question or doubt you can reach out to:
+
+Twitter: @Age_Of_Entropy
+Twitter: @warlockk87
+Mail: hohenhaimmaster@gmail.com
