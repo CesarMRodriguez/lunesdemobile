@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbarTask" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ic_arrow_back" app:titleTextColor="@android:color/white" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbarTask">
+        <EditText android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:id="@id/etUsername" android:background="@drawable/edt_drawable" android:padding="@dimen/_10sdp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Username" android:inputType="text" android:imeOptions="actionNext" />
+        <EditText android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:id="@id/etPassword" android:background="@drawable/edt_drawable" android:padding="@dimen/_10sdp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_16sdp" android:hint="Password" android:inputType="textPassword" android:imeOptions="actionDone" />
+        <ProgressBar android:id="@id/progress" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleX="0.5" android:scaleY="0.5" />
+        <Button android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textColor="@android:color/white" android:id="@id/btnCheckEncryptFlag" android:background="@drawable/btn_drawable" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:minWidth="150.0dip" android:text="Verify" />
+    </LinearLayout>
+</RelativeLayout>

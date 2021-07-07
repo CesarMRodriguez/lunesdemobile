@@ -1,0 +1,171 @@
+.class public final Lv0/c/b/b/g/a/wj2;
+.super Lv0/c/b/b/g/a/bk2;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lv0/c/b/b/g/a/bk2<",
+        "Lv0/c/b/b/g/a/ok2;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field public final synthetic b:Landroid/content/Context;
+
+.field public final synthetic c:Ljava/lang/String;
+
+.field public final synthetic d:Lv0/c/b/b/g/a/ua;
+
+.field public final synthetic e:Lv0/c/b/b/g/a/rj2;
+
+
+# direct methods
+.method public constructor <init>(Lv0/c/b/b/g/a/rj2;Landroid/content/Context;Ljava/lang/String;Lv0/c/b/b/g/a/ua;)V
+    .locals 0
+
+    iput-object p1, p0, Lv0/c/b/b/g/a/wj2;->e:Lv0/c/b/b/g/a/rj2;
+
+    iput-object p2, p0, Lv0/c/b/b/g/a/wj2;->b:Landroid/content/Context;
+
+    iput-object p3, p0, Lv0/c/b/b/g/a/wj2;->c:Ljava/lang/String;
+
+    iput-object p4, p0, Lv0/c/b/b/g/a/wj2;->d:Lv0/c/b/b/g/a/ua;
+
+    invoke-direct {p0}, Lv0/c/b/b/g/a/bk2;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lv0/c/b/b/g/a/dl2;)Ljava/lang/Object;
+    .locals 4
+
+    iget-object v0, p0, Lv0/c/b/b/g/a/wj2;->b:Landroid/content/Context;
+
+    .line 1
+    new-instance v1, Lv0/c/b/b/e/b;
+
+    invoke-direct {v1, v0}, Lv0/c/b/b/e/b;-><init>(Ljava/lang/Object;)V
+
+    .line 2
+    iget-object v0, p0, Lv0/c/b/b/g/a/wj2;->c:Ljava/lang/String;
+
+    iget-object v2, p0, Lv0/c/b/b/g/a/wj2;->d:Lv0/c/b/b/g/a/ua;
+
+    const v3, 0xc2be7e0
+
+    invoke-interface {p1, v1, v0, v2, v3}, Lv0/c/b/b/g/a/dl2;->o4(Lv0/c/b/b/e/a;Ljava/lang/String;Lv0/c/b/b/g/a/ua;I)Lv0/c/b/b/g/a/ok2;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final synthetic c()Ljava/lang/Object;
+    .locals 2
+
+    iget-object v0, p0, Lv0/c/b/b/g/a/wj2;->b:Landroid/content/Context;
+
+    const-string v1, "native_ad"
+
+    invoke-static {v0, v1}, Lv0/c/b/b/g/a/rj2;->b(Landroid/content/Context;Ljava/lang/String;)V
+
+    new-instance v0, Lv0/c/b/b/g/a/vm2;
+
+    invoke-direct {v0}, Lv0/c/b/b/g/a/vm2;-><init>()V
+
+    return-object v0
+.end method
+
+.method public final d()Ljava/lang/Object;
+    .locals 6
+
+    iget-object v0, p0, Lv0/c/b/b/g/a/wj2;->e:Lv0/c/b/b/g/a/rj2;
+
+    .line 1
+    iget-object v0, v0, Lv0/c/b/b/g/a/rj2;->b:Lv0/c/b/b/g/a/zi2;
+
+    .line 2
+    iget-object v1, p0, Lv0/c/b/b/g/a/wj2;->b:Landroid/content/Context;
+
+    iget-object v2, p0, Lv0/c/b/b/g/a/wj2;->c:Ljava/lang/String;
+
+    iget-object v3, p0, Lv0/c/b/b/g/a/wj2;->d:Lv0/c/b/b/g/a/ua;
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    const/4 v4, 0x0
+
+    .line 4
+    :try_start_0
+    new-instance v5, Lv0/c/b/b/e/b;
+
+    invoke-direct {v5, v1}, Lv0/c/b/b/e/b;-><init>(Ljava/lang/Object;)V
+
+    .line 5
+    invoke-virtual {v0, v1}, Lv0/c/b/b/e/c;->b(Landroid/content/Context;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lv0/c/b/b/g/a/pk2;
+
+    const v1, 0xc2be7e0
+
+    invoke-interface {v0, v5, v2, v3, v1}, Lv0/c/b/b/g/a/pk2;->x1(Lv0/c/b/b/e/a;Ljava/lang/String;Lv0/c/b/b/g/a/ua;I)Landroid/os/IBinder;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    goto :goto_2
+
+    :cond_0
+    const-string v1, "com.google.android.gms.ads.internal.client.IAdLoaderBuilder"
+
+    invoke-interface {v0, v1}, Landroid/os/IBinder;->queryLocalInterface(Ljava/lang/String;)Landroid/os/IInterface;
+
+    move-result-object v1
+
+    instance-of v2, v1, Lv0/c/b/b/g/a/ok2;
+
+    if-eqz v2, :cond_1
+
+    check-cast v1, Lv0/c/b/b/g/a/ok2;
+
+    :goto_0
+    move-object v4, v1
+
+    goto :goto_2
+
+    :cond_1
+    new-instance v1, Lv0/c/b/b/g/a/qk2;
+
+    invoke-direct {v1, v0}, Lv0/c/b/b/g/a/qk2;-><init>(Landroid/os/IBinder;)V
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Lv0/c/b/b/e/c$a; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_1
+    move-exception v0
+
+    :goto_1
+    const-string v1, "Could not create remote builder for AdLoader."
+
+    invoke-static {v1, v0}, Lv0/c/b/b/d/k;->F2(Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    :goto_2
+    return-object v4
+.end method

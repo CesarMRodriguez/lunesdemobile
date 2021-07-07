@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:icon="@drawable/ic_home" android:id="@id/nav_home" android:title="@string/title_http_traffic" />
+    <item android:icon="@drawable/ic_menu" android:id="@id/nav_http_traffic" android:title="@string/http_traffic" />
+    <item android:icon="@drawable/ic_menu" android:id="@id/nav_https_traffic" android:title="@string/https_traffic" />
+    <item android:title="@string/public_key_pinning_title">
+        <menu>
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_public_key1" android:title="@string/public_key_pinning_1" />
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_public_key2" android:title="@string/public_key_pinning_2" />
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_public_key3" android:title="@string/public_key_pinning_3" />
+        </menu>
+    </item>
+    <item android:title="@string/non_http_traffic_title">
+        <menu>
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_tcp_traffic" android:title="@string/tcp_traffic" />
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_udp_traffic" android:title="@string/udp_traffic" />
+        </menu>
+    </item>
+    <item android:title="@string/websocket_traffic_title">
+        <menu>
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_web_socket" android:title="@string/web_socket" />
+            <item android:icon="@drawable/ic_menu" android:id="@id/nav_web_socket_secure" android:title="@string/web_socket_secure" />
+        </menu>
+    </item>
+</menu>

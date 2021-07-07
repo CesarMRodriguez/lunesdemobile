@@ -1,0 +1,49 @@
+In order to install qemu and test the printf functionality, download stretch6 from the following folder:
+	https://drive.google.com/drive/folders/107uMlL_DS8yD2TS_0yrHXBDnLOj44a8P
+
+
+Change start.sh for newer versions of qemu:
+
+	from -redir ...
+
+to
+
+  -nic user,hostfwd=tcp::${SSH_PORT}-:22 \
+  -nic user,hostfwd=tcp::${EXTRA_PORT}-:4444 \
+
+The script is the following one:
+
+#!/bin/bash
+
+SSH_PORT=5022
+EXTRA_PORT=6987
+
+qemu-system-arm \
+  -cpu arm1176 \
+  -m 256 \
+  -nic user,hostfwd=tcp::${SSH_PORT}-:22 \
+  -nic user,hostfwd=tcp::${EXTRA_PORT}-:4444 \
+  -kernel kernel-qemu-4.4.34-jessie \
+  -M versatilepb \
+  -no-reboot \
+  -serial stdio \
+  -append "root=/dev/sda2 panic=1 rootfstype=ext4 rw console=ttyAMA0" \
+  -nographic -monitor /dev/null \
+  -hda ./raspbian-stretch.img
+
+
+Credentials
+===========
+user: pi
+password: raspberry
+
+En otra pantalla:
+  ssh -p 5022 pi@127.0.0.1
+
+Compilation of examples:
+
+$ gcc formatstr2.c -o formatstr2
+
+printf code: https://code.woboq.org/linux/linux/arch/x86/boot/printf.c.html
+
+Examples in folder 15-format-string. Most of them are taken from: https://github.com/attify/the-definite-guide-to-arm-exploitation

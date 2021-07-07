@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <WebView android:id="@id/mWebView" android:background="@android:color/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/llButtons" />
+    <RelativeLayout android:id="@id/relInternet" android:padding="16.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/ivNoInternet" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textColor="@color/colorText" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="No internet available!" android:layout_below="@id/ivNoInternet" android:fontFamily="sans-serif-light" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/mProgreeBar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:scaleX="0.5" android:scaleY="0.5" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/llButtons" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tvHint" android:background="@color/colorPrimary" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="0.5dip" android:text="Hint" android:layout_weight="1.0" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tvTask" android:background="@color/colorPrimary" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.5dip" android:text="Task" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.nambimobile.widgets.efab.ExpandableFabLayout android:id="@id/expandable_fab_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+        <com.nambimobile.widgets.efab.ExpandableFab android:layout_gravity="end|bottom|center" android:id="@id/expandable_fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/ui_margin_medium" android:layout_marginBottom="@dimen/ui_margin_medium" app:efab_closingAnticipateTension="0.0" app:efab_color="@color/colorPrimary" app:efab_icon="@drawable/ic_main_float" app:efab_iconAnimationRotationDeg="-225.0" />
+        <com.nambimobile.widgets.efab.FabOption android:id="@id/fabHint" android:layout_width="wrap_content" android:layout_height="wrap_content" app:fab_color="@color/colorPrimary" app:fab_icon="@drawable/ic_hint" app:label_backgroundColor="@color/colorPrimary" app:label_text="Hint" app:label_textColor="@android:color/white" />
+        <com.nambimobile.widgets.efab.FabOption android:id="@id/fabTask" android:layout_width="wrap_content" android:layout_height="wrap_content" app:fab_color="@color/colorPrimary" app:fab_icon="@drawable/ic_task" app:label_backgroundColor="@color/colorPrimary" app:label_text="Task" app:label_textColor="@android:color/white" />
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+</RelativeLayout>

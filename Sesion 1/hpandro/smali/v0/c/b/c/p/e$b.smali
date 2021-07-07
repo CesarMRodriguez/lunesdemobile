@@ -1,0 +1,36 @@
+.class public Lv0/c/b/c/p/e$b;
+.super Lv0/c/b/c/p/e$h;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lv0/c/b/c/p/e;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = "b"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>(Lv0/c/b/c/p/e;)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, v0}, Lv0/c/b/c/p/e$h;-><init>(Lv0/c/b/c/p/e;Lv0/c/b/c/p/c;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public a()F
+    .locals 1
+
+    const/4 v0, 0x0
+
+    return v0
+.end method

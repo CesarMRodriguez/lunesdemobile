@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.hpandro.androidsecurity" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <permission android:name="com.hpandro.androidsecurity.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="com.hpandro.androidsecurity.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.hpandro.androidsecurity.MainApp" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.authentication.SuccessFlagActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.authentication.OTPActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.authentication.FA2TaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.hash.SHA1HashActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.hash.MD5HashActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.hash.MD4HashActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.misc.QRCodeActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.webApplications.LoginBypassActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.webApplications.BruteforceActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.webApplications.HTML5ControlsActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.IMSITaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.ESNTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.MEIDTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.IMEITaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.GPSLocationTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.DeviceMacTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.deviceID.SSAIDTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.RSAActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.PredictableInitializationVectorActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.AESActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.BlowfishActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.RC4Activity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.ThreeDESActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.encryption.DESTaskActivity"/>
+        <activity android:exported="true" android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.HiddenActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.ActivityDataTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.PasteBoardTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.UserDictionaryCacheTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.MemoryActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.ScreenshotsActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.AppBackupTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.UserInterfaceTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.KeyboardCacheTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.KeyChainTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.KeyStoreTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.EncryptRealmDBActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.EncryptSQLiteDBActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.ExternalStorageActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.InternalStorageActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.RealmDataBaseActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.SQLiteDataBaseActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.datastorage.SharedPreferencesTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.websocket.WebSocketSecureActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.websocket.WebSocketActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.trafficanalysis.HTTPSTrafficActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.trafficanalysis.HTTPTrafficActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.logs.LogsTaskActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.nonhttptraffic.UDPTrafficActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.task.nonhttptraffic.TCPTrafficActivity"/>
+        <activity android:name="com.hpandro.androidsecurity.ui.activity.TaskActivity"/>
+        <activity android:hardwareAccelerated="true" android:name="com.hpandro.androidsecurity.ui.activity.HomeActivity" android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:label="@string/app_name" android:name="com.hpandro.androidsecurity.ui.activity.SplashActivity" android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="@string/app_id"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <service android:exported="false" android:name="com.hpandro.androidsecurity.fcm.OSNotificationExtenderService" android:permission="android.permission.BIND_JOB_SERVICE">
+            <intent-filter>
+                <action android:name="com.onesignal.NotificationExtender"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.onesignal.NotificationOpened.DEFAULT" android:value="DISABLE"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="false" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <provider android:authorities="com.hpandro.androidsecurity.mobileadsinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.android.gms.ads.MobileAdsInitProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.ads.AdService"/>
+        <provider android:authorities="com.hpandro.androidsecurity.workmanager-init" android:directBootAware="false" android:exported="false" android:multiprocess="true" android:name="androidx.work.impl.WorkManagerInitializer"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
+        <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="false" android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"/>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="false" android:exported="false" android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.karumi.dexter.DexterActivity" android:theme="@style/Dexter.Internal.Theme.Transparent"/>
+        <meta-data android:name="onesignal_app_id" android:value="39d2ad2f-73ac-4456-b845-3f0ff06fb90f"/>
+        <meta-data android:name="onesignal_google_project_number" android:value="str:REMOTE"/>
+        <receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter android:priority="999">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <category android:name="com.hpandro.androidsecurity"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.NotificationOpenedReceiver"/>
+        <service android:exported="false" android:name="com.onesignal.HmsMessageServiceOneSignal">
+            <intent-filter>
+                <action android:name="com.huawei.push.action.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:name="com.onesignal.NotificationOpenedActivityHMS" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.onesignal.GcmIntentService"/>
+        <service android:name="com.onesignal.GcmIntentJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.onesignal.RestoreJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.onesignal.RestoreKickoffJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.onesignal.SyncService" android:stopWithTask="true"/>
+        <service android:name="com.onesignal.SyncJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:name="com.onesignal.PermissionsActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:name="com.onesignal.NotificationRestoreService"/>
+        <receiver android:name="com.onesignal.BootUpReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.onesignal.UpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <service android:directBootAware="true" android:exported="false" android:name="com.google.firebase.messaging.FirebaseMessagingService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.hpandro.androidsecurity.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:authorities="com.hpandro.androidsecurity.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

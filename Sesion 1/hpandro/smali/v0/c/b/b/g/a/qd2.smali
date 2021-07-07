@@ -1,0 +1,45 @@
+.class public final Lv0/c/b/b/g/a/qd2;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic e:Lv0/c/b/b/g/a/l72;
+
+.field public final synthetic f:Lv0/c/b/b/g/a/nd2;
+
+
+# direct methods
+.method public constructor <init>(Lv0/c/b/b/g/a/nd2;Lv0/c/b/b/g/a/l72;)V
+    .locals 0
+
+    iput-object p1, p0, Lv0/c/b/b/g/a/qd2;->f:Lv0/c/b/b/g/a/nd2;
+
+    iput-object p2, p0, Lv0/c/b/b/g/a/qd2;->e:Lv0/c/b/b/g/a/l72;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 1
+
+    iget-object v0, p0, Lv0/c/b/b/g/a/qd2;->f:Lv0/c/b/b/g/a/nd2;
+
+    .line 1
+    iget-object v0, v0, Lv0/c/b/b/g/a/nd2;->b:Lv0/c/b/b/g/a/od2;
+
+    .line 2
+    check-cast v0, Lv0/c/b/b/g/a/pn;
+
+    .line 3
+    invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    return-void
+.end method

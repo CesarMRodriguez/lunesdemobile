@@ -1,0 +1,50 @@
+.class public final Lv0/c/b/b/g/a/rm0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Lv0/c/b/b/g/a/kn1;
+
+.field public final b:Lv0/c/b/b/g/a/kn1;
+
+.field public final c:Lv0/c/b/b/g/a/wn0;
+
+.field public final d:Lv0/c/b/b/g/a/h22;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Lv0/c/b/b/g/a/h22<",
+            "Lv0/c/b/b/g/a/xo0;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Lv0/c/b/b/g/a/kn1;Lv0/c/b/b/g/a/kn1;Lv0/c/b/b/g/a/wn0;Lv0/c/b/b/g/a/h22;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lv0/c/b/b/g/a/kn1;",
+            "Lv0/c/b/b/g/a/kn1;",
+            "Lv0/c/b/b/g/a/wn0;",
+            "Lv0/c/b/b/g/a/h22<",
+            "Lv0/c/b/b/g/a/xo0;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lv0/c/b/b/g/a/rm0;->a:Lv0/c/b/b/g/a/kn1;
+
+    iput-object p2, p0, Lv0/c/b/b/g/a/rm0;->b:Lv0/c/b/b/g/a/kn1;
+
+    iput-object p3, p0, Lv0/c/b/b/g/a/rm0;->c:Lv0/c/b/b/g/a/wn0;
+
+    iput-object p4, p0, Lv0/c/b/b/g/a/rm0;->d:Lv0/c/b/b/g/a/h22;
+
+    return-void
+.end method

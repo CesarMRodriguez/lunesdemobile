@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:padding="30.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/logo" android:adjustViewBounds="true" android:layout_centerInParent="true" android:alpha="0.08" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Display3" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:id="@id/tvTitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="hpAndro" android:fontFamily="sans-serif-condensed-light" />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Title" android:textColor="@color/colorPrimaryDark" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/app_name" android:layout_below="@id/tvTitle" android:fontFamily="sans-serif-medium" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbarTask" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ic_arrow_back" app:titleTextColor="@android:color/white" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:gravity="center" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:text="@string/call_hidden_activity" android:layout_centerInParent="true" />
+    <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textColor="@color/colorBlack" android:gravity="center" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/ctf" android:layout_alignParentBottom="true" />
+</RelativeLayout>

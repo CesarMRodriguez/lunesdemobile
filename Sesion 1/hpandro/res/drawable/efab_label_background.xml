@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/efab_label_background" />
+    <corners android:radius="@dimen/efab_ui_margin_xxs" />
+    <padding android:left="@dimen/efab_ui_margin_xs" android:top="@dimen/efab_ui_margin_xxs" android:right="@dimen/efab_ui_margin_xs" android:bottom="@dimen/efab_ui_margin_xxs" />
+</shape>

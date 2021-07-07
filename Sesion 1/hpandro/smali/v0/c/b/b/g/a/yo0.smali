@@ -1,0 +1,28 @@
+.class public interface abstract Lv0/c/b/b/g/a/yo0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<RetT:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Lv0/c/b/b/g/a/wf;)Lv0/c/b/b/g/a/ln1;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lv0/c/b/b/g/a/wf;",
+            ")",
+            "Lv0/c/b/b/g/a/ln1<",
+            "TRetT;>;"
+        }
+    .end annotation
+.end method

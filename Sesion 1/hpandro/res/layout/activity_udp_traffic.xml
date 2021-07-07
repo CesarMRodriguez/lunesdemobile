@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.Toolbar android:id="@id/toolbarTask" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:navigationIcon="@drawable/ic_arrow_back" app:title="@string/udp_traffic" app:titleTextColor="@android:color/white" />
+    <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbarTask">
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Caption" android:textColor="@color/colorText" android:gravity="center" android:id="@id/tvInfo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Received flag from the UDP connection." />
+        <TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textColor="@color/colorText" android:gravity="center" android:id="@id/tvStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="UDP disconnected" android:layout_below="@id/tvInfo" />
+        <Button android:textAppearance="@style/TextAppearance.AppCompat.Button" android:textColor="@android:color/white" android:id="@id/btnConnectUDP" android:background="@drawable/btn_drawable" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Connect" android:layout_below="@id/tvStatus" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</RelativeLayout>

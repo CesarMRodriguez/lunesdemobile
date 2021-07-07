@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_2FA">2FA - OTP</string>
+    <string name="_2FA_SMS">2FA - SMS Read</string>
+    <string name="_3des_enc_pass">3hpAndro</string>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="action_settings">Settings</string>
+    <string name="ads_unit_2fa">ca-app-pub-8474731879788478/4839510867</string>
+    <string name="ads_unit_http_traffic">ca-app-pub-8474731879788478/1566066601</string>
+    <string name="ads_unit_https_traffic">ca-app-pub-8474731879788478/9517122475</string>
+    <string name="ads_unit_internal_storage">ca-app-pub-8474731879788478/9082503042</string>
+    <string name="ads_unit_logs">ca-app-pub-8474731879788478/4615385248</string>
+    <string name="ads_unit_preference_storage">ca-app-pub-8474731879788478/6100922960</string>
+    <string name="ads_unit_sqlite_unencrypted">ca-app-pub-8474731879788478/2105729839</string>
+    <string name="ads_unit_tcp_traffic">ca-app-pub-8474731879788478/9078138776</string>
+    <string name="ads_unit_udp_traffic">ca-app-pub-8474731879788478/3825812090</string>
+    <string name="aes_enc_iv">RaviRamesh</string>
+    <string name="aes_enc_pass">hpAndro</string>
+    <string name="app_backup">App Backup</string>
+    <string name="app_id">ca-app-pub-8474731879788478~6023519112</string>
+    <string name="app_name">Android Security Testing</string>
+    <string name="app_name1">Traffic Analysis Testing</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="application_lock">Application lock</string>
+    <string name="banner_ad">ca-app-pub-8474731879788478/4970098378</string>
+    <string name="biometric">Biometric</string>
+    <string name="blowfish_enc_pass">hpAndro</string>
+    <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="bottomsheet_action_expand_halfway">Expand halfway</string>
+    <string name="btnStart">Start</string>
+    <string name="btnTips">Tips</string>
+    <string name="busybox_binaries">BusyBox Binaries</string>
+    <string name="call_hidden_activity">Call <b>Hidden Activity</b> to perform this task.</string>
+    <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
+    <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d/%2$d</string>
+    <string name="chip_text">Chip text</string>
+    <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">"%1$s won't run without Google Play services, which are missing from your device."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s won't run without Google Play services, which are not supported by your device."</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"%1$s won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">"%1$s won't run without Google Play services, which are currently updating."</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="confirm_credentials">Confirm Credentials</string>
+    <string name="content_provider">Content Providers</string>
+    <string name="ctf">You can verity your flag at <b><u>ctf.hpandro.raviramesh.info</u></b></string>
+    <string name="dangerous_props">Dangerous Props</string>
+    <string name="debug_logs">Debug Logs</string>
+    <string name="debugger_detection">Debugger detection</string>
+    <string name="deeplink">Deeplink</string>
+    <string name="default_web_client_id">638257579638-0mjm42lg7dr453391usnhie5hcr0tu4g.apps.googleusercontent.com</string>
+    <string name="des_enc_pass">hpAndro1</string>
+    <string name="efab_efab_illegal_optional_properties">"One or more optional attributes for an ExpandableFab were set, but didn't meet the criteria below: 
+
+ Optional Attribute || Criteria 
+ orientation || must be a value of enum class Orientation 
+ efabColor || must be an integer color or color state list 
+ efabIcon || must be a color or drawable resource 
+ efabSize || must be [FabSize.MINI], [FabSize.NORMAL], [FabSize.AUTO] or [FabSize.CUSTOM]. FabSize.CUSTOM should be used when setting the size of the ExpandableFab's layout_width and layout_height to a custom value manually. 
+ efabEnabled || must be a boolean 
+ iconRotationDeg || must be a floating point number 
+ fabOptionSize || must be [FabSize.MINI], [FabSize.NORMAL], [FabSize.AUTO] or [FabSize.CUSTOM]. FabSize.CUSTOM should be used when setting the size of the FabOptions' layout_width and layout_height to a custom value manually. 
+ fabOptionPosition || must be a value of enum class FabOptionPosition 
+ firstFabOptionMarginPx || must be a floating point number 
+ successiveFabOptionMarginPx || must be a floating point number 
+ openingAnimationDurationMs || must be a positive long number 
+ closingAnimationDurationMs || must be a positive long number 
+ closingAnticipateTension || must be a positive float number 
+"</string>
+    <string name="efab_faboption_illegal_optional_properties">"One or more optional attributes for a FabOption were set, but didn't meet the criteria below: 
+
+ Optional Attribute || Criteria 
+ orientation || must be a value of enum class Orientation 
+ fabOptionColor || must be an integer color or color state list 
+ fabOptionIcon || must be a color or drawable resource 
+ fabOptionEnabled || must be a boolean 
+ openingAnimationDurationMs || must be a positive long number 
+ closingAnimationDurationMs || must be a positive long number 
+ openingOvershootTension || must be a positive long number 
+"</string>
+    <string name="efab_label_illegal_optional_properties">"One or more optional attributes for a Label were set, but didn't meet the criteria below: 
+
+ labelText || must be a CharSequence 
+ labelTextColor || must be an integer color or color state list 
+ labelTextSize || must be a positive floating point number 
+ labelBackgroundColor || must be an integer color or color state list 
+ labelElevation || must be a positive floating point number 
+ labelEnabled || must be a boolean 
+ position || must be a value of enum class [LabelPosition] 
+ marginPx || must be a positive floating point number 
+ translationXPx || must be a floating point number 
+ visibleToHiddenAnimationDurationMs || must be a positive long number 
+ hiddenToVisibleAnimationDurationMs || must be a positive long number 
+ overshootTension || must be a positive floating point number 
+"</string>
+    <string name="efab_layout_multiple_efabs">You can only set one ExpandableFab per orientation in an ExpandableFabLayout (you set 2 or more for the %s orientation).</string>
+    <string name="efab_layout_must_be_child_of_expandablefab_layout">Overlays, ExpandableFabs and FabOptions must be children of an [ExpandableFabLayout] in order to function properly. Please see the documentation for how to correctly use the ExpandableFab widget.</string>
+    <string name="efab_overlay_illegal_optional_properties">"One or more optional attributes for an Overlay were set, but didn't meet the criteria below: 
+
+ Optional Attribute || Criteria 
+ orientation || must be a value of enum class Orientation 
+ overlayColor || must be an integer color or color state list 
+ overlayAlpha || must be a positive floating point number 
+ openingAnimationDurationMs || must be a positive long number 
+ closingAnimationDurationMs || must be a positive long number 
+"</string>
+    <string name="emulator_detection">Emulator detection</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="error_logs">Error Logs</string>
+    <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
+    <string name="external_storage">External Storage</string>
+    <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="firebase_database_url">https://androidsecurity-d861f.firebaseio.com</string>
+    <string name="firebase_db">Firebase Real-time Databases</string>
+    <string name="gcm_defaultSenderId">638257579638</string>
+    <string name="google_api_key">AIzaSyDtE5P9AlpJ2fDdRNnBPKnVUTH228qsE4I</string>
+    <string name="google_app_id">1:638257579638:android:d5c6cbaba76f29d7a64157</string>
+    <string name="google_crash_reporting_api_key">AIzaSyDtE5P9AlpJ2fDdRNnBPKnVUTH228qsE4I</string>
+    <string name="google_storage_bucket">androidsecurity-d861f.appspot.com</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="http_traffic">HTTP Traffic</string>
+    <string name="https_traffic">HTTPS Traffic</string>
+    <string name="icon_content_description">Dialog Icon</string>
+    <string name="info_logs">Info Logs</string>
+    <string name="info_predictable_IV"><b>Predict 4 digit IV</b> and decrypt the encrypted flag using AES.</string>
+    <string name="internal_storage">Internal Storage</string>
+    <string name="item_view_role_description">Tab</string>
+    <string name="keyboard_cache">Keyboard Cache</string>
+    <string name="keychain">KeyChain</string>
+    <string name="keystore">KeyStore</string>
+    <string name="library_android_database_sqlcipher_author">Zetetic, LLC</string>
+    <string name="library_android_database_sqlcipher_authorWebsite">https://www.zetetic.net/sqlcipher/</string>
+    <string name="library_android_database_sqlcipher_isOpenSource">true</string>
+    <string name="library_android_database_sqlcipher_libraryDescription">Android SQLite API based on SQLCipher</string>
+    <string name="library_android_database_sqlcipher_libraryName">SQLCipher for Android</string>
+    <string name="library_android_database_sqlcipher_libraryVersion">${clientVersionNumber}</string>
+    <string name="library_android_database_sqlcipher_libraryWebsite">https://www.zetetic.net/sqlcipher/</string>
+    <string name="library_android_database_sqlcipher_licenseLink">https://www.zetetic.net/sqlcipher/license/</string>
+    <string name="library_android_database_sqlcipher_repositoryLink">https://github.com/sqlcipher/android-database-sqlcipher</string>
+    <string name="location_not_available_message">"Looks like this app doesn't have location services configured. Please see OneSignal docs for more information."</string>
+    <string name="location_not_available_open_settings_message">You have previously denied sharing your device location. Please go to settings to enable.</string>
+    <string name="location_not_available_open_settings_option">Settings</string>
+    <string name="location_not_available_title">Location Not Available</string>
+    <string name="material_clock_display_divider">:</string>
+    <string name="material_clock_toggle_content_description">Select AM or PM</string>
+    <string name="material_hour_selection">Select hour</string>
+    <string name="material_hour_suffix">"%1$s o'clock"</string>
+    <string name="material_minute_selection">Select minutes</string>
+    <string name="material_minute_suffix">%1$s minutes</string>
+    <string name="material_slider_range_end">Range end,</string>
+    <string name="material_slider_range_start">Range start,</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Switch to clock mode for the time input.</string>
+    <string name="material_timepicker_hour">Hour</string>
+    <string name="material_timepicker_minute">Minute</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Select time</string>
+    <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="menu_3_16">File System Expose</string>
+    <string name="menu_3_20">Memory</string>
+    <string name="menu_3_21">User Dictionary Cache</string>
+    <string name="menu_3_22">Paste Board</string>
+    <string name="menu_3_23">Activity data</string>
+    <string name="menu_4">Encryption</string>
+    <string name="menu_4_1">Symmetric Encryption</string>
+    <string name="menu_4_10">Weaker Padding</string>
+    <string name="menu_4_1_1">DES</string>
+    <string name="menu_4_1_2">3DES</string>
+    <string name="menu_4_1_4">RC4</string>
+    <string name="menu_4_1_5">Blowfish</string>
+    <string name="menu_4_1_6">AES</string>
+    <string name="menu_4_1_7">Predictable Initialization Vector</string>
+    <string name="menu_4_2">Asymmetric Encryption</string>
+    <string name="menu_4_2_1">RSA</string>
+    <string name="menu_4_3">Hashing</string>
+    <string name="menu_4_3_1">MD4</string>
+    <string name="menu_4_3_2">MD5</string>
+    <string name="menu_4_3_3">SHA1</string>
+    <string name="menu_4_4">Message Authentication Codes</string>
+    <string name="menu_4_5">Signatures</string>
+    <string name="menu_4_6">Custom Implementations</string>
+    <string name="menu_4_7">Caesar Cipher</string>
+    <string name="menu_4_8">Weak Key Generation</string>
+    <string name="menu_4_9">Weak Random Number</string>
+    <string name="menu_5">Authentication</string>
+    <string name="menu_5_1">Biometric</string>
+    <string name="menu_5_2">Confirm Credentials</string>
+    <string name="menu_5_3">2FA - OTP</string>
+    <string name="menu_5_4">2FA - SMS Read</string>
+    <string name="menu_5_5">Application lock</string>
+    <string name="menu_6">Binary Protection</string>
+    <string name="menu_6_1">Library (NDK)</string>
+    <string name="menu_6_2">Packers</string>
+    <string name="menu_6_3">Obfuscator</string>
+    <string name="menu_7">Device ID</string>
+    <string name="menu_7_1">SSAID/ANDROID_ID</string>
+    <string name="menu_7_2">Device MAC</string>
+    <string name="menu_7_3">GPS Location</string>
+    <string name="menu_7_4">IMEI/ESN</string>
+    <string name="menu_7_5">MEID</string>
+    <string name="menu_7_6">ESN</string>
+    <string name="menu_7_7">IMSI</string>
+    <string name="menu_8">Web Application</string>
+    <string name="menu_8_1">HTML5 Controls</string>
+    <string name="menu_8_2">Bruteforce</string>
+    <string name="menu_8_3">Login bypass</string>
+    <string name="menu_8_4">Cross Site Scripting</string>
+    <string name="menu_8_5">XXE</string>
+    <string name="menu_8_6">SQLi</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_home">Android Security</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_what_is">What is %1$s?</string>
+    <string name="mtrl_badge_numberless_content_description">New notification</string>
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description">More than %1$d new notifications</string>
+    <string name="mtrl_exceed_max_badge_number_suffix">%1$d%2$s</string>
+    <string name="mtrl_picker_a11y_next_month">Change to next month</string>
+    <string name="mtrl_picker_a11y_prev_month">Change to previous month</string>
+    <string name="mtrl_picker_announce_current_selection">Current selection: %1$s</string>
+    <string name="mtrl_picker_cancel">@android:string/cancel</string>
+    <string name="mtrl_picker_confirm">@android:string/ok</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Select Date</string>
+    <string name="mtrl_picker_date_header_unselected">Selected date</string>
+    <string name="mtrl_picker_day_of_week_column_header">Column of days: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Invalid format.</string>
+    <string name="mtrl_picker_invalid_format_example">Example: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Use: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Invalid range.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Navigate to year %1$s</string>
+    <string name="mtrl_picker_out_of_range">Out of range: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Start date – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – End date</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Select Range</string>
+    <string name="mtrl_picker_range_header_unselected">Start date – End date</string>
+    <string name="mtrl_picker_save">Save</string>
+    <string name="mtrl_picker_text_input_date_hint">Date</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">End date</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Start date</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">y</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Switch to calendar input mode</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Tap to switch to selecting a day</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
+    <string name="nav_app_bar_navigate_up_description">Navigate up</string>
+    <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_subtitle">hpandro1337@gmail.com</string>
+    <string name="nav_header_title">Android Security</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="non_http_traffic_title">Non-HTTP Traffic</string>
+    <string name="offline_notification_text">Tap to open ad</string>
+    <string name="offline_notification_title">View the ad you saved when you were offline</string>
+    <string name="offline_opt_in_confirm">OK</string>
+    <string name="offline_opt_in_confirmation">"You'll get a notification with the link when you're back online"</string>
+    <string name="offline_opt_in_decline">No thanks</string>
+    <string name="offline_opt_in_message">"We'll send you a notification with a link to the advertiser site."</string>
+    <string name="offline_opt_in_title">"Open ad when you're back online."</string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="potentially_dangerous">Potentially Dangerous</string>
+    <string name="project_id">androidsecurity-d861f</string>
+    <string name="public_key_pinning_1">Public Key Pinning 1</string>
+    <string name="public_key_pinning_2">Public Key Pinning 2</string>
+    <string name="public_key_pinning_3">Public Key Pinning 3</string>
+    <string name="public_key_pinning_title">Public Key Pinning</string>
+    <string name="qr">QR Code</string>
+    <string name="rc4_enc_pass">hpAndro</string>
+    <string name="realm_db">Realm Databases</string>
+    <string name="realm_edb">Realm Databases (Encrypted)</string>
+    <string name="root_clocking">Root Clocking</string>
+    <string name="root_management">Root Management</string>
+    <string name="rw_system">RW System</string>
+    <string name="s1">Save image</string>
+    <string name="s2">Allow Ad to store image in Picture gallery?</string>
+    <string name="s3">Accept</string>
+    <string name="s4">Decline</string>
+    <string name="s5">Create calendar event</string>
+    <string name="s6">Allow Ad to create a calendar event?</string>
+    <string name="s7">Test Ad</string>
+    <string name="screenshots">Screenshots</string>
+    <string name="search_menu_title">Search</string>
+    <string name="shared_pref">Shared Preferences</string>
+    <string name="splash_name">"Android
+Security"</string>
+    <string name="sql_injection">SQL Injection</string>
+    <string name="sqlite_db">SQLite Databases</string>
+    <string name="sqlite_edb">SQLite Databases (Encrypted)</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="su_binary">SU Binary</string>
+    <string name="su_exists">Su Exists</string>
+    <string name="tcp_traffic">TCP Traffic</string>
+    <string name="text_keys">Test Keys</string>
+    <string name="title_authentication">Authentication</string>
+    <string name="title_http_traffic">HTTP Traffic</string>
+    <string name="title_insecure_datastorage">Insecure Data Storage</string>
+    <string name="title_logs">Logs</string>
+    <string name="title_misc">Miscellaneous</string>
+    <string name="title_root_detection">Root Detection</string>
+    <string name="udp_traffic">UDP Traffic</string>
+    <string name="user_interface">User Interface</string>
+    <string name="verbose_logs">Verbose Logs</string>
+    <string name="warning_logs">Warnings Logs</string>
+    <string name="web_socket">Web Socket (WS)</string>
+    <string name="web_socket_secure">Web Socket Secure (WSS)</string>
+    <string name="websocket_traffic_title">WebSocket Traffic</string>
+    <string name="wtf_logs">WTF Logs</string>
+</resources>
