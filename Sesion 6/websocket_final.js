@@ -70,12 +70,15 @@ function readNewStream(inputStream) {
     return "<script>WebSocket.prototype.send2 = WebSocket.prototype.send; WebSocket.prototype.send = function (msg) { JInterface.sendMessage(msg); this.send2(msg); }</script>" + total.toString();
 }
 /*
+
+//run this at step 4-1
 Java.perform( function () {
 
 	Java.openClassFile("/data/data/com.hpandro.androidsecurity/files/injectable.dex").load();
 });
 
 
+//run this at step 4-2
 Java.perform( function () {
 
 	var newClass = Java.use("com.hpandro.example.JInterfaceInternal");
