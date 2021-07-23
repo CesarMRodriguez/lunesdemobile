@@ -1,0 +1,284 @@
+Explicación de por qué no funcionó ContentValues.
+
+frida-trace
+===========
+
+/home/cesar/Documents/Stream/lunesdemobile/Sesion 5/1
+
+1) Mostrar ejemplo con frida-trace  --decorate -i "print*" ./simple1
+
+	inicia el proceso y hace output de las cosas.
+
+2) Mostra forma más cómoda:
+
+	spawn: ./simple1
+
+en otra terminal:
+
+	frida-trace simple1 -i "print*"
+
+con esto vamos a ver los hooks y que se pueden cambiar on the fly los __handlers__
+
+-> vamos a ver el primer crackme
+	-> 
+
+vemos las librerías que están incluidas dentro de la aplicación (de forma estática):
+
+	linux-vdso.so.1 (0x00007ffc6349b000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fe81bec2000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fe81c0fd000)
+
+De estas la interesante es libc porque maneja memoria, maneja strings. Y si en este caso tenemos que comparar un password con input de usuario probablemetne alguna de estas llamadas esté involucrada.
+
+Para eso vamos a usar la opción t, que intercepta todas las funciones de un método:
+
+frida-trace -t "libc.so.6" ./crackme01 banana
+
+> devuelve que no interceptó ningún método.
+
+Vemos en realidad el módulo cómo se llama en el entorno de Frida:
+
+frida -f crackme01 -l example.js
+
+Module name: linux-vdso.so.1 (Base Address: 0x7ffeb698b000)
+Module name: libc-2.31.so (Base Address: 0x7f57d467c000)
+Module name: ld-2.31.so (Base Address: 0x7f57d48b2000)
+Module name: libpthread-2.31.so (Base Address: 0x7f57d488a000)
+Module name: frida-agent-64.so (Base Address: 0x7f57d27bd000)
+Module name: libdl-2.31.so (Base Address: 0x7f57d4884000)
+Module name: libresolv-2.31.so (Base Address: 0x7f57d275f000)
+Module name: librt-2.31.so (Base Address: 0x7f57d4879000)
+Module name: libm-2.31.so (Base Address: 0x7f57d2610000)
+
+Hay diferencias con ldd, porque este parámetro busca las librerías linkeadas estáticamente, y en cambio Frida lo hace con las dinámicas. Adicionalmente frida agrega unas cuantas libs extras para su funcionamiento:
+
+
+frida-trace  -t "libc-2.31.so" ./crackme01 salama
+Instrumenting...                                                        
+_dl_find_dso_for_object: Loaded handler at "/home/cesar/Documents/Stream/lunesdemobile/Sesion 5/crackme01/__handlers__/ld_2.31.so/_dl_find_dso_for_object.js"
+__tls_get_addr: Loaded handler at "/home/cesar/Documents/Stream/lunesdemobile/Sesion 5/crackme01/__handlers__/ld_2.31.so/__tls_get_addr.js"
+__tunable_get_val: Loaded handler at "/home/cesar/Documents/Stream/lunesdemobile/Sesion 5/crackme01/__handlers__/ld_2.31.so/__tunable_get_val.js"
+_dl_exception_create: Loaded handler at "/home/cesar/Documents/Stream/lunesdemobile/Sesion 5/crackme01/__handlers__/ld_2.31.so/_dl_exception_create.js"
+[salama] is not the right password.
+Started tracing 4 functions. Press Ctrl+C to stop.             
+
+como vemos no hace hook sobre las funciones que queremos.
+
+Si probamos hookear directo la función:
+
+frida-trace  -i strncmp ./crackme01 salama
+Instrumenting...                                                        
+strncmp: Loaded handler at "/home/cesar/Documents/Stream/lunesdemobile/Sesion 5/crackme01/__handlers__/libc_2.31.so/strncmp.js"
+You win! Perfect! ([salama] was a correct password)
+
+Started tracing 1 function. Press Ctrl+C to stop.                       
+           /* TID 0x19a4 */
+     4 ms  strncmp(s1="salama", s2="verysecret", n=0xa)
+Process terminated
+
+
+eso funciona. Vamos a ver por qué no carga el hook a través del módulo (ver que está en libc):
+
+> frida -f crackme01 -l list_exported2.js 
+
+No anda por algún motivo, así que seguimos con el caso anterior con el -i.
+
+
+También se puede modificar el método de salida para modificar el comportamiento de la aplicación:
+
+se cambia el contenido de __handlers__/libc_2.31.so/strncmp.js
+
+Si el handler ya exite, cuando se levanta la aplicación no se pisa el script generado
+
+
+>>> ahora probamos lo mismo en Android
+
+
+check this with frida-trace
+
+	frida-trace -U com.hpandro.androidsecurity -j '*.SQLiteDataBaseActivity!b*/isu'
+
+examples: https://frida.re/docs/frida-trace/
+
+
+
+
+****** SEGUIR CON FRIDA Y LOS EJEMPLOS *******
+
+10) EncryptedSqliteDB
+
+No encontraba si se estaba llamando o no el método b que es similar al método del paso anterior:
+
+Java.perform( function () {
+    var Activity = Java.use("com.hpandro.androidsecurity.ui.activity.task.datastorage.EncryptSQLiteDBActivity");
+    Activity.b.implementation = function (rVar) {
+        console.log("entra");
+        return this.b(rVar);
+    }
+    
+});
+
+Aparentemente no se navega al task. Vamos a forzar esto llamando directo a la activity:
+
+Buscando la razón por la cual no funciona se me ocurrió buscar los lugares donde se usa SQLiteDataBaseActivity (en realidad es cualquier activity con un reto que ande), encontré la clase "v0.d.a.c.b.c" que es un Fragment y tiene el método  onClick con la siguiente información: 
+
+...
+                } else if (g.a(str2, y(R.string.root_management)) || g.a(str2, y(R.string.potentially_dangerous)) || g.a(str2, y(R.string.root_clocking)) || g.a(str2, y(R.string.text_keys)) || g.a(str2, y(R.string.dangerous_props)) || g.a(str2, y(R.string.busybox_binaries)) || g.a(str2, y(R.string.su_binary)) || g.a(str2, y(R.string.su_exists)) || g.a(str2, y(R.string.rw_system)) || g.a(str2, y(R.string.emulator_detection)) || g.a(str2, y(R.string.debugger_detection))) {
+                    return;
+                } else {
+                    if (g.a(str2, y(R.string.sqlite_db))) {
+                        intent = new Intent(c(), SQLiteDataBaseActivity.class);
+                    } else if (!g.a(str2, y(R.string.sqlite_edb))) {
+                        if (g.a(str2, y(R.string.realm_db))) {
+...
+
+Por lo que se puede ver esta debe ser la implementación del botón flotante de Task, y dependiendo de en qué página esté es a donde va al hacer click. Adicionalmente se ve que no hay ninguna acción relacionada con la clase EncryptedSQLDBActivity. Esto explica por qué no se puede acceder a la misma. Vamos a modificar el método para que redireccione a la página que quiero:
+
+
+
+Java.perform(  function () {
+    
+    var Intent = Java.use("android.content.Intent");
+    var String = Java.use("java.lang.String");
+    
+    var startIntent = Intent.$new();
+    startIntent.setClassName(String.$new("com.hpandro.androidsecurity"),String.$new("com.hpandro.androidsecurity.ui.activity.task.datastorage.EncryptSQLiteDBActivity"));
+    //myIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+    startIntent.setFlags(0x10000000);
+    Java.use('android.app.ActivityThread').currentApplication().startActivity(startIntent);
+});
+
+
+Java.perform( function () {
+   var StringBuilder = Java.use("java.lang.StringBuilder");
+   StringBuilder.toString.implementation = function () {
+        var resultado = this.toString();
+        if (resultado.indexOf("hpandro{") >= 0) {
+            console.log("resultado: " + resultado);
+        }
+        return resultado;
+   } 
+});
+
+Luego ejecutamos el botón de obtener el contenido. Lo primero que vemos si sniffeamos es que el flag se devuelve a partir de html:
+
+GET http://hpandro.raviramesh.info/flagstore.php?flag=edb
+
+y que el flag tiene la misma lógica que en caso anterior, por lo que el script generado en el caso anterior de decriptación va a funcionar. Lo que en estos momentos no se triggerea es el script de almacenamiento de la clave, porque en realidad no se guarda encriptada:
+
+        //este es el mismo script que en caso anterior para desencriptar. Se guarda en sb el resultado.
+        while (i < substring.length()) {
+            int i2 = i + 2;
+            sb.append((char) v0.a.a.a.a.x(substring, i, i2, "(this as java.lang.Strin…ing(startIndex, endIndex)", 16, 16));
+            i = i2;
+        }
+
+        //no se hace nada con sb (g.d es una validación que se agrega por el uso de Kotlin)
+        g.d(sb.toString(), "output.toString()");
+        Toast.makeText(this, "Insecure Storage flag received successfully.", 1).show();
+        ProgressBar progressBar = (ProgressBar) y(R.id.progress);
+        g.d(progressBar, "progress");
+        progressBar.setVisibility(8);
+
+We still want to solve this with Frida. It is a bit harder because we do not have a clear point where the output is being used. We'll do the following: 
+    
+    track the content and then rebuild the method that creates the String
+
+        
+String f = v0.a.a.a.a.f(rVar, "flag", "response.asJsonObject.get(\"flag\")", "response.asJsonObject.get(\"flag\").asString");
+        
+
+{{encrypted_sqlite.js}}
+
+
+
+
+11) RealmDatabase: Es exactamente igual al EncryptedSQLiteDBActivity
+
+GET http://hpandro.raviramesh.info/flagstore.php?flag=realm
+
+I did a review on the source code to see if there was any place where a Realm database was used but I couldn't find it. I assume this section is not being completed, so I'll do a new update whenever it is finished.
+
+var specialMessage = null;
+
+Java.perform( function () {
+	var StringJava = Java.use("java.lang.String");
+	specialMessage = StringJava.$new("output.toString()");
+	var g = Java.use("a1.q.b.g");
+	g.d.implementation = function (sb, message) {
+		if (message == "output.toString()") {
+			console.log(sb.toString());
+		}
+		this.d(sb, message);
+		
+	}
+});
+
+
+
+12) EncryptedRealmDatabase: Es exactamente igual al EncryptedSQLiteDBActivity
+
+GET http://hpandro.raviramesh.info/flagstore.php?flag=erealm
+
+I did a review on the source code to see if there was any place where a Realm database was used but I couldn't find it. I assume this section is not being completed, so I'll do a new update whenever it is finished.
+
+13) SharedPreferencesTaskActivity: 
+
+        //open shared preferences
+        SharedPreferences sharedPreferences = a.getSharedPreferences("AndroidSecurity", 0);
+        
+        //decodes the response as in previous examples
+        String f = v0.a.a.a.a.f(rVar, "flag", "response.asJsonObject.get(\"flag\")", "response.asJsonObject.get(\"flag\").asString");
+        o j = rVar.d().j("flag");
+        g.d(j, "response.asJsonObject.get(\"flag\")");
+        String substring = f.substring(1, j.g().length() - 1);
+        g.d(substring, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+        g.e(substring, "data");
+        StringBuilder sb = new StringBuilder("");
+        int i = 0;
+        while (i < substring.length()) {
+            int i2 = i + 2;
+            sb.append((char) v0.a.a.a.a.x(substring, i, i2, "(this as java.lang.Strin…ing(startIndex, endIndex)", 16, 16));
+            i = i2;
+        }
+        String sb2 = sb.toString();
+        g.d(sb2, "output.toString()");
+        //adds the content to the sharedpreferences
+        sharedPreferences.edit().putString("flag", sb2).apply();
+
+
+Dynamically can be done by going to the <app_home>/shared_prefs folder:
+
+vbox86p:/data/data/com.hpandro.androidsecurity # cd shared_prefs/                                                                                    
+
+We know that the name of the sharedprefs file is AndroidSecurity.xml:
+
+        SharedPreferences sharedPreferences = a.getSharedPreferences("AndroidSecurity", 0);
+
+We confirm it is in the folder:        
+
+vbox86p:/data/data/com.hpandro.androidsecurity/shared_prefs # ls -al
+
+-rw-rw----  1 u0_a86 u0_a86  157 2021-07-02 11:08 AndroidSecurity.xml
+-rw-rw----  1 u0_a86 u0_a86  239 2021-06-25 19:26 FirebaseAppHeartBeat.xml
+-rw-rw----  1 u0_a86 u0_a86   65 2021-06-07 18:46 GTPlayerPurchases.xml
+-rw-rw----  1 u0_a86 u0_a86   65 2021-06-07 18:46 OneSignalTriggers.xml
+-rw-rw----  1 u0_a86 u0_a86  127 2021-06-25 19:49 WebViewChromiumPrefs.xml
+-rw-rw----  1 u0_a86 u0_a86  610 2021-07-02 10:59 admob.xml
+-rw-rw----  1 u0_a86 u0_a86  507 2021-06-25 19:26 com.google.android.gms.appid.xml
+-rw-rw----  1 u0_a86 u0_a86  794 2021-07-02 11:08 com.google.android.gms.measurement.prefs.xml
+-rw-rw----  1 u0_a86 u0_a86  133 2021-06-18 17:58 h2.xml
+-rw-rw----  1 u0_a86 u0_a86  520 2021-06-25 19:49 pcvmspf.xml
+
+And then we print the content:
+
+vbox86p:/data/data/com.hpandro.androidsecurity/shared_prefs # cat AndroidSecurity.xml                                                                
+
+
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <string name="flag">hpandro{shared_pref.I6R9xCPJt7jJqZnlWeI2MzGaJW40cldi}</string>
+</map>
+vbox86p:/data/data/com.hpandro.androidsecurity/shared_prefs # cd ..
+
+
